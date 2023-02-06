@@ -1,6 +1,6 @@
-### Written by Dr Maryam Abo-Tabik
-
 #!/bin/bash -l
+
+### Written by Dr Maryam Abo-Tabik
 
 # Specify the current working directory as the location for executables/files
 # This is the default setting.

@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 {
     unsigned int i, init = 0, count = 0;
 
-    for (i = 1; i < 100000000; i++)
+    for (i = 1; i < 1000000; i++)
     {
         unsigned int k = count_length(i);
         

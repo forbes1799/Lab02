@@ -25,20 +25,7 @@ gcc -O0 quad.c func1.c  -lm
 time ./a.out
 echo '-------'
 
-# GNU opt
-echo GNU opt
-gcc -O3 quad.c func1.c  -lm
-time ./a.out
-echo '-------'
-
-# INTEL no-opt
-echo INTEL no-opt
-icc -O0 quad.c func1.c 
-time ./a.out
-echo '-------'
-
-# Intel opt
-echo INTEL opt
-icc -O3 quad.c func1.c 
-time ./a.out
-echo '-------'
+# Run...
+# GNU with Optimisation
+# Intel without Optimisation
+# Intel with Optimisation

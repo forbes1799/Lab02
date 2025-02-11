@@ -18,7 +18,7 @@ void assign(int** arr, int m, int n)
 	for (i = 0; i < m; i++)
 	{
 		for (j = 0; j < n; j++) {
-			arr[i][j] = 10.0 * rand() / RAND_MAX;
+			arr[i][j] = (14 * i) % (i + j + 1);
 		}
 	}
 }

@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const int m = 5000;
-const int n = 5000;
+const int m = 15000;
+const int n = 15000;
 
 
 void assign(int** arr, int m, int n)

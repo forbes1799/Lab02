@@ -1,10 +1,6 @@
-/*
- * Written by Dr Maryam Abo-Tabik
- *
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/time.h>  
 
 const int m = 15000;
 const int n = 15000;
@@ -65,6 +61,11 @@ void _add(int** arr1, int** arr2, int** arr3, int m, int n)
 
 int main(void)
 {
+
+	struct timeval wallStart, wallEnd;
+
+	gettimeofday(&wallStart, NULL); // save start time in to variable 'wallStart'
+
 	printf("\n main() \n");
 	int r, i;
 
@@ -92,6 +93,11 @@ int main(void)
 	_free(arr1, m, n);
 	_free(arr2, m, n);
 	_free(arr3, m, n);
+
+	gettimeofday(&wallEnd, NULL); // end time
+	double wallSecs = (wallEnd.tv_sec - wallStart.tv_sec);           // just integral number of seconds
+  	double WALLtimeTaken = 1.0E-06 * ((wallSecs*1000000) + (wallEnd.tv_usec - wallStart.tv_usec)); // and now with any microseconds
+  	printf("WALL CLOCK Time: %f seconds  \n", WALLtimeTaken);
 
 	return 0;
 }

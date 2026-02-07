@@ -1,5 +1,4 @@
 #!/bin/bash -l
-#Written by Dr Maryam Abo Tabik
 # Specify the current working directory as the location for executables/files
 # This is the default setting.
 #SBATCH -D ./
@@ -16,10 +15,6 @@
 export OMP_NUM_THREADS=1
 
 # GNU no-opt
-echo GNU no-opt
-gcc -O0 quad.c func1.c  -lm
-time ./a.out
-echo '-------'
 
 # Run...
-# GNU with Optimisation
+

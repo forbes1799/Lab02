@@ -22,7 +22,6 @@ void workblock_1(const double *A, const double *B, double *C)
     }
 }
 
-/* Column-major traversal */
 void workblock_2(const double *A, const double *B, double *C)
 {
     for (int i = 0; i < M; i++) {

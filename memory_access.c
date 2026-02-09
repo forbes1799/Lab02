@@ -16,7 +16,8 @@ void workblock_1(const double *A, const double *B, double *C)
 {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
-            C[i*M + j] = A[i*M + j] + B[i*M + j];
+            int idx = i * M + j; //1D access for [i][j]
+            C[idx] = A[idx] + B[idx];
         }
     }
 }
@@ -26,7 +27,8 @@ void workblock_2(const double *A, const double *B, double *C)
 {
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
-            C[j*M + i] = A[j*M + i] + B[j*M + i];
+            int idx = j * M + i; //1D access for [j][i]
+            C[idx] = A[idx] + B[idx];
         }
     }
 }

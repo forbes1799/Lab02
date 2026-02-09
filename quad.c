@@ -37,3 +37,7 @@ int main(int argc, char** argv) {
   double WALLtimeTaken = 1.0E-06 * ((wallSecs*1000000) + (wallEnd.tv_usec - wallStart.tv_usec)); // and now with any microseconds
   printf("WALL CLOCK Time: %f seconds  \n", WALLtimeTaken);
 }
+
+double func (double x) {
+  return pow(x,1.5)/3.1 - x/log(3.0);
+}

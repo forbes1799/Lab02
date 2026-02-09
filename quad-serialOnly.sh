@@ -11,10 +11,10 @@
 #SBATCH -p course
 #SBATCH -t 1
 
-# just 1 thread to run on
-export OMP_NUM_THREADS=1
+echo GNU no-opt
+gcc -O0 quad.c -lm
+./a.out
+echo '-------'
 
-# GNU no-opt
-
-# Run...
+# Add code to optimise different programs
 
